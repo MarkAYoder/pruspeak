@@ -33,7 +33,16 @@ ENDSCRIPT
 RUN
 '''
 
-ret = pru_speak.execute_instruction(EX3)
+#PWM
+EX4 = '''\
+SCRIPT
+SET var1, 50
+SET PWM[0], var1
+ENDSCRIPT
+RUN
+'''
+
+ret = pru_speak.execute_instruction(EX4)
 print ret
 
 while True:
